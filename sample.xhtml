@@ -1,0 +1,9 @@
+<h:form>
+    <ui:repeat value="#{yourManagedBean.radioOptions}" var="option">
+        <h:selectOneRadio value="#{yourManagedBean.selectedOption}">
+            <f:selectItem itemValue="#{option}" itemLabel="#{option}" />
+        </h:selectOneRadio>
+        <br/>
+    </ui:repeat>
+    <h:commandButton value="Submit" action="#{yourManagedBean.submit}" />
+</h:form>
